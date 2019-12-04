@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css?family=Arvo|Lato:300,300i,400,400i,700,700i,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700|Titillium+Web:300,400,400i,600,600i,700,900&display=swap");
+@media (min-width: 782px) {
+  .edit-post-layout.is-sidebar-opened
+.edit-post-plugin-sidebar__sidebar-layout,
+  .edit-post-layout.is-sidebar-opened .edit-post-sidebar {
+    width: 350px; }
+  .edit-post-layout.is-sidebar-opened .edit-post-layout__content {
+    margin-right: 350px; } }
+
+.editor-styles-wrapper, .wp-block {
+  color: #7a8295;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.3rem; }
+
+.block-editor-block-list__layout {
+  padding-left: 30px;
+  padding-right: 10px; }
+  .block-editor-block-list__layout body,
+  .block-editor-block-list__layout button,
+  .block-editor-block-list__layout input,
+  .block-editor-block-list__layout select,
+  .block-editor-block-list__layout optgroup,
+  .block-editor-block-list__layout textarea {
+    color: #7a8295;
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.3rem;
+    font-size: 0.9rem; }
+    @media (min-width: 992px) {
+      .block-editor-block-list__layout body,
+      .block-editor-block-list__layout button,
+      .block-editor-block-list__layout input,
+      .block-editor-block-list__layout select,
+      .block-editor-block-list__layout optgroup,
+      .block-editor-block-list__layout textarea {
+        font-size: 1.1rem;
+        line-height: 1.75rem; } }
+  .block-editor-block-list__layout body {
+    font-weight: 400; }
+  .block-editor-block-list__layout p {
+    margin-bottom: 1.5em; }
+  .block-editor-block-list__layout dfn, .block-editor-block-list__layout cite, .block-editor-block-list__layout em, .block-editor-block-list__layout i {
+    font-style: italic; }
+  .block-editor-block-list__layout blockquote {
+    margin: 0 1.5em; }
+  .block-editor-block-list__layout address {
+    margin: 0 0 1.5em; }
+  .block-editor-block-list__layout pre {
+    background: #eee;
+    font-family: "Courier 10 Pitch", Courier, monospace;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    max-width: 100%;
+    overflow: auto;
+    padding: 1.6em; }
+  .block-editor-block-list__layout code, .block-editor-block-list__layout kbd, .block-editor-block-list__layout tt, .block-editor-block-list__layout var {
+    font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace; }
+  .block-editor-block-list__layout abbr, .block-editor-block-list__layout acronym {
+    border-bottom: 1px dotted #666;
+    cursor: help; }
+  .block-editor-block-list__layout mark, .block-editor-block-list__layout ins {
+    background: #fff9c0;
+    text-decoration: none; }
+  .block-editor-block-list__layout big {
+    font-size: 125%; }
+  .block-editor-block-list__layout h1, .block-editor-block-list__layout h2, .block-editor-block-list__layout h3 {
+    color: black;
+    font-family: "Titillium Web", serif;
+    font-weight: 700;
+    clear: both; }
+  .block-editor-block-list__layout h1, .block-editor-block-list__layout h2, .block-editor-block-list__layout h3, .block-editor-block-list__layout h4, .block-editor-block-list__layout h5 {
+    color: black; }
+  .block-editor-block-list__layout h1 {
+    font-size: 2.1rem;
+    line-height: 2.4rem;
+    margin: .5rem 0; }
+    @media (min-width: 992px) {
+      .block-editor-block-list__layout h1 {
+        font-size: 2.4rem;
+        line-height: 3.2rem; } }
+  .block-editor-block-list__layout h2 {
+    font-size: 1.9rem;
+    line-height: 2.3rem; }
+  .block-editor-block-list__layout h3 {
+    font-size: 1.7rem; }
+  .block-editor-block-list__layout h4 {
+    font-size: 1.5rem; }
+  .block-editor-block-list__layout h5 {
+    font-size: 1.3rem; }
+  .block-editor-block-list__layout .smalltitle {
+    text-transform: uppercase;
+    color: black;
+    letter-spacing: .1rem;
+    font-weight: 550;
+    font-size: 0.9rem;
+    line-height: 1.3rem; }
+
+.wp-block {
+  max-width: 800px; }
+
+.editor-post-title__input {
+  height: unset !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important; }
+
+.edit-post-visual-editor {
+  padding: 40px 0; }

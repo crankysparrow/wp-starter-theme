@@ -1,0 +1,45 @@
+//
+// MEDIA QUERIES
+//_________________________________________________________
+
+// Map of breakpoints.
+$breakpoints: (
+  xs: 375px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+// MEDIA BREAKPOINT UP
+
+// @include media-breakpoint-up(sm) {}
+@mixin media-breakpoint-up($breakpoint) {
+
+  @if map-has-key($breakpoints, $breakpoint) {
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+    @media (min-width: $breakpoint-value) {
+      @content;
+    }
+
+  } @else {
+    @warn 'Invalid breakpoint: #{$breakpoint}.';
+  }
+
+}
+
+@mixin  media-breakpoint-down($breakpoint) {
+
+  @if map-has-key($breakpoints, $breakpoint)  {
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+    @media (max-width: $breakpoint-value) {
+      @content;
+    }
+
+  } @else {
+    @warn 'Invalid breakpoint: #{$breakpoint}.';
+  }
+
+}

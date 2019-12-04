@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Arvo|Lato:300,300i,400,400i,700,700i,900&display=swap');
+@import "variables-site/variables-site";
+
+body {
+  @import "mixins/mixins-master";
+  @import "typography/typography";
+  display: flex;
+  flex-direction: column;
+  p {
+    margin: 0;
+  }
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6rem;
+}
+
+.blue-row {
+  background-color: #33bee6;
+  color: white;
+}
+
+.Arvo {
+  font-family: "Arvo", serif;
+  // font-weight: 800;
+  font-size: calc(#{$font__main-size} + .1rem);
+  line-height: calc(#{$font__main-line-height} + .5rem);
+}
+
+.Lato {
+  font-family: "Lato", sans-serif;
+  // font-weight: 400;
+}
+
+img {
+  display: block;
+}

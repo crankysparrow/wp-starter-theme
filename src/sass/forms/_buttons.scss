@@ -1,0 +1,41 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	@extend .referable-button;
+}
+
+.referable-button {
+	&:visited {
+		color: $color__button-text;
+	}
+	&:hover {
+		cursor: pointer;
+	}
+	&:focus  {
+		outline: none;
+	}
+	display: inline-block;
+	font-family: $font__main;
+	text-decoration: none;
+	border: 1px solid;
+	border-color: $color__border-button;
+	background: $color__background-button;
+	color: $color__button-text;
+	line-height: 1;
+	padding: .5rem 2rem;
+	text-transform: uppercase;
+}
+
+.referable-button-outline {
+	@extend .referable-button;
+	background: transparent !important;
+	color: $color__border-button !important;
+	&:visited {
+		color: $color__border-button !important;
+	}
+	&:hover {
+		color: black !important;
+		border-color: black !important;
+	}
+}
