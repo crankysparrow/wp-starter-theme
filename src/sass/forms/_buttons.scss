@@ -2,10 +2,10 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	@extend .referable-button;
+	@extend .button;
 }
 
-.referable-button {
+.button {
 	&:visited {
 		color: $color__button-text;
 	}
@@ -15,7 +15,6 @@ input[type="submit"] {
 	&:focus  {
 		outline: none;
 	}
-	display: inline-block;
 	font-family: $font__main;
 	text-decoration: none;
 	border: 1px solid;
@@ -27,8 +26,8 @@ input[type="submit"] {
 	text-transform: uppercase;
 }
 
-.referable-button-outline {
-	@extend .referable-button;
+.button-outline {
+	@extend .button;
 	background: transparent !important;
 	color: $color__border-button !important;
 	&:visited {

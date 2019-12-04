@@ -15,21 +15,24 @@
 
 		<?php if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php
-			revgrowth_posted_on();
-			revgrowth_posted_by();
-			?>
+			<?php the_date(); ?> <br/>
+			<?php the_author_meta('display_name'); ?>
+
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php revgrowth_post_thumbnail(); ?>
+	<div class="entry-thumbnail">
+		<?php if ( has_post_thumbnail() ) :
+			the_post_thumbnail('large');
+		endif; ?>
+	</div>
 
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-summary -->
 
 	<footer class="entry-footer">
-		<?php revgrowth_entry_footer(); ?>
+		<?php /* mstarter_entry_footer(); */ ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

@@ -37,13 +37,21 @@ hr {
 	align-items: center;
 	& > p, & > h1, & > h2, & > h3, & > h4, & > table {
 		width: 80%;
+		margin-left: auto;
+		margin-right: auto;
 	}
 }
 
-.entry-header {
+.entry-header, .entry-summary, .entry-thumbnail, .page-header {
 	width: 80%;
 	margin: 0 auto;
+	img {
+		max-height: 400px;
+		width: auto;
+	}
 }
+
+
 
 @import "lists";
 

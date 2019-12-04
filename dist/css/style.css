@@ -4857,11 +4857,16 @@ hr {
   width: 100%;
   align-items: center; }
   .entry-content > p, .entry-content > h1, .entry-content > h2, .entry-content > h3, .entry-content > h4, .entry-content > table {
-    width: 80%; }
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto; }
 
-.entry-header {
+.entry-header, .entry-summary, .entry-thumbnail, .page-header {
   width: 80%;
   margin: 0 auto; }
+  .entry-header img, .entry-summary img, .entry-thumbnail img, .page-header img {
+    max-height: 400px;
+    width: auto; }
 
 ul, ol {
   margin: 0 0 1.5em 3em; }
@@ -4900,11 +4905,10 @@ table {
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
-.referable-button, button,
+.button, button,
 input[type="button"],
 input[type="reset"],
-input[type="submit"], .referable-button-outline {
-  display: inline-block;
+input[type="submit"], .button-outline {
   font-family: "Open Sans", sans-serif;
   text-decoration: none;
   border: 1px solid;
@@ -4914,28 +4918,28 @@ input[type="submit"], .referable-button-outline {
   line-height: 1;
   padding: .5rem 2rem;
   text-transform: uppercase; }
-  .referable-button:visited, button:visited,
+  .button:visited, button:visited,
   input:visited[type="button"],
   input:visited[type="reset"],
-  input:visited[type="submit"], .referable-button-outline:visited {
+  input:visited[type="submit"], .button-outline:visited {
     color: white; }
-  .referable-button:hover, button:hover,
+  .button:hover, button:hover,
   input:hover[type="button"],
   input:hover[type="reset"],
-  input:hover[type="submit"], .referable-button-outline:hover {
+  input:hover[type="submit"], .button-outline:hover {
     cursor: pointer; }
-  .referable-button:focus, button:focus,
+  .button:focus, button:focus,
   input:focus[type="button"],
   input:focus[type="reset"],
-  input:focus[type="submit"], .referable-button-outline:focus {
+  input:focus[type="submit"], .button-outline:focus {
     outline: none; }
 
-.referable-button-outline {
+.button-outline {
   background: transparent !important;
   color: #128040 !important; }
-  .referable-button-outline:visited {
+  .button-outline:visited {
     color: #128040 !important; }
-  .referable-button-outline:hover {
+  .button-outline:hover {
     color: black !important;
     border-color: black !important; }
 
@@ -4961,9 +4965,10 @@ textarea {
   border-left: 0;
   border-right: 0;
   padding: 3px;
-  font-family: "Arvo", serif;
   font-size: 1rem;
-  line-height: 1rem; }
+  line-height: 1rem;
+  width: 100%;
+  margin: .5rem 0; }
   input[type="text"]:focus,
   input[type="email"]:focus,
   input[type="url"]:focus,
@@ -4983,9 +4988,13 @@ textarea {
     color: #111;
     outline: none; }
 
+form.search-form label {
+  width: 100%; }
+
 form {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  align-items: center; }
   form button {
     align-self: center; }
 

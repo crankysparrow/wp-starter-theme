@@ -20,19 +20,24 @@ textarea {
 	border-left: 0;
 	border-right: 0;
 	padding: 3px;
-	font-family: "Arvo", serif;
 	font-size: 1rem;
 	line-height: 1rem;
-
+	width: 100%;
+	margin: .5rem 0;
 	&:focus {
 		color: $color__text-input-focus;
 		outline: none;
 	}
 }
 
+form.search-form label {
+	width: 100%;
+}
+
 form {
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 	button {
 		align-self: center;
 	}
