@@ -40,7 +40,7 @@
   .logo-desktop {
     display: none;
   }
-  @include media-breakpoint-up(md) {
+  @include breakpoint-up(md) {
     .logo-desktop {
       height: 100%;
       display: flex;
@@ -63,7 +63,7 @@
     flex-direction: row;
     align-items: center;
   }
-  @include media-breakpoint-up(lg) {
+  @include breakpoint-up(lg) {
     padding: 0 7rem;
     li {
       padding: 0 1.5rem;
@@ -79,7 +79,7 @@
   padding: 1rem 1rem;
   align-items: center;
   width: 100%;
-  @include media-breakpoint-up(lg) {
+  @include breakpoint-up(lg) {
     flex-direction: row;
     justify-content: space-between;
     padding: .2rem 7rem;

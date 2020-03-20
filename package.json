@@ -1,5 +1,5 @@
 {
-  "name": "revgrowth",
+  "name": "wpstarter",
   "version": "1.0.0",
   "description": "[![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)",
   "main": "index.js",
@@ -19,5 +19,13 @@
     "gulp-sass": "^4.0.2",
     "vinyl-named": "^1.1.0",
     "webpack-stream": "^5.2.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crankysparrow/wp-starter-theme.git"
+  },
+  "bugs": {
+    "url": "https://github.com/crankysparrow/wp-starter-theme/issues"
+  },
+  "homepage": "https://github.com/crankysparrow/wp-starter-theme#readme"
 }

@@ -13,8 +13,8 @@ $breakpoints: (
 
 // MEDIA BREAKPOINT UP
 
-// @include media-breakpoint-up(sm) {}
-@mixin media-breakpoint-up($breakpoint) {
+// @include breakpoint-up(sm) {}
+@mixin breakpoint-up($breakpoint) {
 
   @if map-has-key($breakpoints, $breakpoint) {
     $breakpoint-value: map-get($breakpoints, $breakpoint);
@@ -29,7 +29,7 @@ $breakpoints: (
 
 }
 
-@mixin  media-breakpoint-down($breakpoint) {
+@mixin  breakpoint-down($breakpoint) {
 
   @if map-has-key($breakpoints, $breakpoint)  {
     $breakpoint-value: map-get($breakpoints, $breakpoint);

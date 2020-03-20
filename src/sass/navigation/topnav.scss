@@ -54,7 +54,7 @@
   }
 }
 
-  @include media-breakpoint-up(md) {
+  @include breakpoint-up(md) {
     .top-nav {
       flex-wrap: nowrap;
       #topnav-menu {
@@ -81,7 +81,7 @@
     background: white;
     height: 4rem;
   }
-  @include media-breakpoint-up(md) {
+  @include breakpoint-up(md) {
     display: none;
   }
 }

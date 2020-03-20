@@ -60,7 +60,7 @@ h1, h2, h3, h4, h5 {
 
 h1 {
 	font-size: $h1-size;
-	@include media-breakpoint-up(lg) {
+	@include breakpoint-up(lg) {
 		font-size: $h1-size-lg;
 		line-height: $h1-line-height-lg;
 	}

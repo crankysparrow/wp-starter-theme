@@ -8,7 +8,7 @@ textarea {
 	font-family: $font__main;
 	line-height: $font__main-line-height;
 	font-size: $font__main-size;
-	@include media-breakpoint-up(lg) {
+	@include breakpoint-up(lg) {
 		font-size: $font__main-size-lg;
 		line-height: $font__main-line-height-lg;
 	}

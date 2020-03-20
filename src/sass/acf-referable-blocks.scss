@@ -32,20 +32,20 @@
   // margin-top: -2rem;
   .header-main-desktop {
     display: none;
-    @include media-breakpoint-up(md) {
+    @include breakpoint-up(md) {
       display: inline;
     }
   }
   .header-main-mobile {
-    @include media-breakpoint-up(md) {
+    @include breakpoint-up(md) {
       display: none;
     }
   }
   margin-bottom: 310px;
-  @include media-breakpoint-up(md) {
+  @include breakpoint-up(md) {
     margin-bottom: 250px;
   }
-  @include media-breakpoint-up(lg) {
+  @include breakpoint-up(lg) {
     margin-bottom: 200px;
   }
   width: 100%;
@@ -73,7 +73,7 @@
     justify-content: center;
     text-align: center;
     z-index: 5;
-    @include media-breakpoint-up(md) {
+    @include breakpoint-up(md) {
       background: unset;
       transform: unset;
       top: 38%;
@@ -93,27 +93,27 @@
       line-height: $h1-line-height-lg;
       font-size: $h1-size;
       letter-spacing: 1px;
-      @include media-breakpoint-up(xs) {
+      @include breakpoint-up(xs) {
         font-size: calc(#{$h1-size-lg} + .7rem);
         line-height: calc(#{$h1-line-height-lg} + .7rem);
         margin: 0 1.5rem 2.5rem 1.5rem;
       }
-      @include media-breakpoint-up(sm)  {
+      @include breakpoint-up(sm)  {
         margin: 0 1.5rem 2.5rem 1.5rem;
         font-size: calc(#{$h1-size-lg} + 1.5rem);
         line-height: calc(#{$h1-line-height-lg} + 1.5rem);
       }
-      @include media-breakpoint-up(md) {
+      @include breakpoint-up(md) {
         margin: 0;
         font-size: calc(#{$h1-size} - .3rem);
         line-height: calc(#{$h1-line-height} - .3rem);
         color: $color__background-emphasis;
       }
-      @include media-breakpoint-up(lg) {
+      @include breakpoint-up(lg) {
         font-size: $h1-size-lg;
         line-height: $h1-line-height-lg;
       }
-      @include media-breakpoint-up(xl) {
+      @include breakpoint-up(xl) {
         font-size: calc(#{$h1-size-lg} + .5rem);
         line-height: calc(#{$h1-line-height-lg} + .5rem);
       }
@@ -123,23 +123,23 @@
       font-size: calc(#{$font__main-size} - .2rem);
       letter-spacing: 1px;
       border-radius: 3px;
-      @include  media-breakpoint-up(xs) {
+      @include  breakpoint-up(xs) {
         font-size: $font__main-size;
         padding: .7rem 1.5rem;
       }
-      @include media-breakpoint-up(sm) {
+      @include breakpoint-up(sm) {
         padding: .9rem  2rem;
         font-size: calc(#{$font__main-size} + .7rem);
       }
-      @include media-breakpoint-up(md) {
+      @include breakpoint-up(md) {
         padding: .5rem 2rem;
         font-size: $font__main-size;
       }
-      @include media-breakpoint-up(lg) {
+      @include breakpoint-up(lg) {
         padding: .7rem 2.5rem;
         font-size: calc(#{$font__main-size} + .3rem);
       }
-      @include media-breakpoint-up(xl) {
+      @include breakpoint-up(xl) {
         padding: .9rem 2.7rem;
         font-size: calc(#{$font__main-size} + .2rem);
       }
@@ -156,22 +156,22 @@
   .case-study-card {
     width: 290px;
   }
-  @include media-breakpoint-up(sm) {
+  @include breakpoint-up(sm) {
     width: 90%;
     margin: auto;
   }
-  @include media-breakpoint-up(md) {
+  @include breakpoint-up(md) {
     width: 84%;
     margin: auto;
   }
-  @include media-breakpoint-up(lg) {
+  @include breakpoint-up(lg) {
     width: 80%;
     .case-study-card {
       flex: 0 0 28%;
       max-width: 28%;
     }
   }
-  @include  media-breakpoint-up(xl) {
+  @include  breakpoint-up(xl) {
     width: 70%;
     .case-study-card {
       flex: 0 0 28%;
@@ -182,11 +182,11 @@
     width: 290px;
     padding: 1rem;
     margin: 1rem;
-    @include media-breakpoint-up(lg) {
+    @include breakpoint-up(lg) {
       flex: 0 0 28%;
       max-width: 28%;
     }
-    @include media-breakpoint-up(xl) {
+    @include breakpoint-up(xl) {
       max-width: 290px;
     }
   }
@@ -222,7 +222,7 @@
     color: $color__secondary;
     font-weight: 900;
     padding:  1rem 1rem 0.5rem 1rem;
-    @include media-breakpoint-up(lg) {
+    @include breakpoint-up(lg) {
       font-size: 4rem;
       line-height: 4rem;
     }
@@ -263,7 +263,7 @@
       bottom: -10px;
     }
   }
-  @include media-breakpoint-down(md) {
+  @include breakpoint-down(md) {
     .header-card {
       min-width: 250px;
       margin: 0 0.6rem;
@@ -276,7 +276,7 @@
       height: 1px;
     }
   }
-  @include media-breakpoint-up(md) {
+  @include breakpoint-up(md) {
     .header-card-extra {
       display: none;
     }
@@ -292,7 +292,7 @@
       }
     }
   }
-  @include media-breakpoint-up(lg) {
+  @include breakpoint-up(lg) {
     bottom: -180px;
     .header-card {
       flex: 0 0 290px;
@@ -309,7 +309,7 @@
   box-sizing: border-box;
   flex-direction: column;
   width: 90%;
-  @include media-breakpoint-up(md) {
+  @include breakpoint-up(md) {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -341,7 +341,7 @@
       height: calc(#{$font__main-line-height} * 3);
     }
   }
-  @include media-breakpoint-up(lg) {
+  @include breakpoint-up(lg) {
     &.twocol {
       .grid-col  {
         width: 47%;
@@ -448,7 +448,7 @@
     width: 100%;
     align-items: center;
   }
-  @include media-breakpoint-up(md) {
+  @include breakpoint-up(md) {
     padding: 3rem 3rem;
     .row-module-row {
       flex-direction: row;
@@ -480,7 +480,7 @@
       }
     }
   }
-  @include media-breakpoint-up(lg) {
+  @include breakpoint-up(lg) {
     padding-left: 16%;
     padding-right: 16%;
     .column-left {
@@ -497,7 +497,7 @@
     h1 {
       font-weight: 700;
     }
-    @include media-breakpoint-up(md) {
+    @include breakpoint-up(md) {
       width: 75%;
     }
     text-align: center;
@@ -513,7 +513,7 @@
       color: white;
     }
   }
-  @include media-breakpoint-up(md) {
+  @include breakpoint-up(md) {
     &.divider {
       .column-left {
         border-right: 1px solid black;
@@ -576,13 +576,13 @@
     flex-direction: column-reverse;
   }
   width: 80%;
-  @include media-breakpoint-up(md) {
+  @include breakpoint-up(md) {
     flex-direction: row;
     &.text-image {
       flex-direction: row-reverse;
     }
   }
-  @include media-breakpoint-up(lg) {
+  @include breakpoint-up(lg) {
     width: 60%;
   }
   .row-2col-text {
@@ -637,7 +637,7 @@
       margin: 1rem 0 0 0;
     }
   }
-  @include media-breakpoint-up(sm) {
+  @include breakpoint-up(sm) {
     width: 70%;
     .text-quote-text {
       padding: 0 0 0 2rem;
@@ -651,7 +651,7 @@
       }
     }
   }
-  @include media-breakpoint-up(md) {
+  @include breakpoint-up(md) {
     flex-direction: row;
     width: 80%;
     .text-quote-text {
@@ -667,7 +667,7 @@
       }
     }
   }
-  @include media-breakpoint-up(lg) {
+  @include breakpoint-up(lg) {
     .text-quote-quote {
       line-height: 2.3rem;
       font-size: 1.2rem;
@@ -680,7 +680,7 @@
       font-size: $font__main-size;
     }
   }
-  @include media-breakpoint-up(xl) {
+  @include breakpoint-up(xl) {
     width: 65%;
   }
   .text-quote-quote, .text-quote-text {
@@ -689,7 +689,7 @@
 }
 
 .testimonial:nth-of-type(2n) {
-  @include media-breakpoint-up(md) {
+  @include breakpoint-up(md) {
     background: url('../../images/chat-outline-back.svg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -751,11 +751,11 @@
   background: url('../../images/chat-testimonial-mobile.svg');
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  @include media-breakpoint-up(sm) {
+  @include breakpoint-up(sm) {
     width: 320px;
     min-height: 450px;
   }
-  @include media-breakpoint-up(md) {
+  @include breakpoint-up(md) {
     width: 650px;
     height: 280px;
     min-height: unset;
@@ -776,7 +776,7 @@
       }
     }
   }
-  @include media-breakpoint-up(lg) {
+  @include breakpoint-up(lg) {
     width: 900px;
     height: 325px;
     padding: 32px 16px 85px 16px;
@@ -789,10 +789,10 @@
   align-items: center;
   font-family: "Arvo";
   // width: 80%;
-  @include media-breakpoint-up(md) {
+  @include breakpoint-up(md) {
     // width: 60%;
   }
-  @include media-breakpoint-up(lg) {
+  @include breakpoint-up(lg) {
     width: 400px;
   }
   form {
