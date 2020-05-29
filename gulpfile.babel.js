@@ -46,7 +46,7 @@ var server = browserSync.create();
 
 export const serve = done => {
   server.init({
-    proxy: 'http://localhost:8888/starter-theme'
+    proxy: 'http://wpstarter.loc'
   });
   done();
 }

@@ -15,7 +15,7 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area page-template">
+	<main id="primary" class="content-area page-template">
 
 		<?php
 		while ( have_posts() ) :
@@ -27,7 +27,7 @@ get_header();
 		endwhile; // End of the loop.
 		?>
 
-	</div><!-- #primary -->
+	</main><!-- #primary -->
 
 <?php
 // get_sidebar();
