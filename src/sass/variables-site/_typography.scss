@@ -1,26 +1,76 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700|Titillium+Web:300,400,400i,600,600i,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400;700&family=Montserrat&display=swap');
 
-$font__main: "Open Sans", sans-serif;
+$font__main: "Montserrat", sans-serif;
 $font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 $font__pre: "Courier 10 Pitch", Courier, monospace;
 $font__line-height-pre: 1.6;
-$font__headers: "Titillium Web", serif;
+$font__headers: "Domine", serif;
 $font__headers-font-weight: 700;
 
-$font__main-size: .9rem;
-$font__main-size-lg: 1.1rem;
+// Modular Scale text sizes! Normal text + Headers
+$base_h: 1;
+$base_t: .9;
+$ratio_h: 1.333;
+$ratio_t: 1.25;
+
+@function msh($l, $base: $base_h) {
+  $res: $base;
+
+  @if $l >= 1 {
+    @for $i from 1 through $l {
+      $res: $res * $ratio_h;
+    }
+  } @else if $l < 0 {
+    @for $i from $l through -1 {
+      $res: $res / $ratio_h;
+    }
+  }
+  @return $res + rem;
+}
+
+@function mst($l, $base: $base_t) {
+  $res: $base;
+
+  @if $l >= 1 {
+    @for $i from 1 through $l {
+      $res: $res * $ratio_t;
+    }
+  } @else if $l < 0 {
+    @for $i from $l through -1 {
+      $res: $res / $ratio_t;
+    }
+  }
+  @return $res + rem;
+}
+
+$font__main-size: mst(0);
 
 $font__main-line-height: 1.3rem;
 $font__main-line-height-lg: 1.75rem;
 
-$h5-size: 1.3rem;
-$h4-size: 1.5rem;
-$h3-size: 1.7rem;
+$font-msh--1: msh(-1);
+$font-msh-0: msh(0);
+$font-msh-1: msh(1);
+$font-msh-2: msh(2);
+$font-msh-3: msh(3);
+$font-msh-4: msh(4);
 
-$h2-size: 1.9rem;
+$font-mst--1: mst(-1);
+$font-mst-0: mst(0);
+$font-mst-1: mst(1);
+
+$line-mst--1: mst(-1, 1.2);
+$line-mst-0: mst(0, 1.2);
+$line-mst-1: mst(1, 1.2);
+
+$line-msh--1: msh(-1, 1.5);
+$line-msh-0: msh(0, 1.5);
+$line-msh-1: msh(1, 1.5);
+$line-msh-2: msh(2, 1.5);
+$line-msh-3: msh(3, 1.5);
+$line-msh-4: msh(4, 1.5);
+
+
 $h2-line-height: 2.3rem;
 
-$h1-size: 2.1rem;
 $h1-line-height: 2.4rem;
-$h1-size-lg: 2.4rem;
-$h1-line-height-lg: 3.2rem;

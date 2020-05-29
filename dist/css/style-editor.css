@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Arvo|Lato:300,300i,400,400i,700,700i,900&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700|Titillium+Web:300,400,400i,600,600i,700,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Domine:wght@400;700&family=Montserrat&display=swap");
 @media (min-width: 782px) {
   .edit-post-layout.is-sidebar-opened
 .edit-post-plugin-sidebar__sidebar-layout,
@@ -10,7 +10,7 @@
 
 .editor-styles-wrapper, .wp-block {
   color: #7a8295;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   line-height: 1.3rem; }
 
 .block-editor-block-list__layout {
@@ -23,22 +23,13 @@
   .block-editor-block-list__layout optgroup,
   .block-editor-block-list__layout textarea {
     color: #7a8295;
-    font-family: "Open Sans", sans-serif;
-    line-height: 1.3rem;
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.2rem;
     font-size: 0.9rem; }
-    @media (min-width: 992px) {
-      .block-editor-block-list__layout body,
-      .block-editor-block-list__layout button,
-      .block-editor-block-list__layout input,
-      .block-editor-block-list__layout select,
-      .block-editor-block-list__layout optgroup,
-      .block-editor-block-list__layout textarea {
-        font-size: 1.1rem;
-        line-height: 1.75rem; } }
   .block-editor-block-list__layout body {
     font-weight: 400; }
   .block-editor-block-list__layout p {
-    margin-bottom: 1.5em; }
+    margin: 1rem 0; }
   .block-editor-block-list__layout dfn, .block-editor-block-list__layout cite, .block-editor-block-list__layout em, .block-editor-block-list__layout i {
     font-style: italic; }
   .block-editor-block-list__layout blockquote {
@@ -61,39 +52,39 @@
   .block-editor-block-list__layout mark, .block-editor-block-list__layout ins {
     background: #fff9c0;
     text-decoration: none; }
-  .block-editor-block-list__layout big {
-    font-size: 125%; }
-  .block-editor-block-list__layout h1, .block-editor-block-list__layout h2, .block-editor-block-list__layout h3 {
+  .block-editor-block-list__layout h1, .block-editor-block-list__layout h2, .block-editor-block-list__layout h3, .block-editor-block-list__layout h4, .block-editor-block-list__layout h5 {
     color: black;
-    font-family: "Titillium Web", serif;
-    font-weight: 700;
-    clear: both; }
+    font-family: "Domine", serif;
+    font-weight: 400;
+    clear: both;
+    margin: .2rem 0; }
   .block-editor-block-list__layout h1, .block-editor-block-list__layout h2, .block-editor-block-list__layout h3, .block-editor-block-list__layout h4, .block-editor-block-list__layout h5 {
     color: black; }
-  .block-editor-block-list__layout h1 {
-    font-size: 2.1rem;
-    line-height: 2.4rem;
+  .block-editor-block-list__layout h1, .block-editor-block-list__layout .h1, .block-editor-block-list__layout .msh4 {
+    font-size: 3.15733rem;
+    line-height: 4.736rem;
     margin: .5rem 0; }
-    @media (min-width: 992px) {
-      .block-editor-block-list__layout h1 {
-        font-size: 2.4rem;
-        line-height: 3.2rem; } }
-  .block-editor-block-list__layout h2 {
-    font-size: 1.9rem;
-    line-height: 2.3rem; }
-  .block-editor-block-list__layout h3 {
-    font-size: 1.7rem; }
-  .block-editor-block-list__layout h4 {
-    font-size: 1.5rem; }
-  .block-editor-block-list__layout h5 {
-    font-size: 1.3rem; }
-  .block-editor-block-list__layout .smalltitle {
-    text-transform: uppercase;
-    color: black;
-    letter-spacing: .1rem;
-    font-weight: 550;
+  .block-editor-block-list__layout h2, .block-editor-block-list__layout .h2, .block-editor-block-list__layout .msh3 {
+    font-size: 2.36859rem;
+    line-height: 3.55289rem; }
+  .block-editor-block-list__layout h3, .block-editor-block-list__layout .h3, .block-editor-block-list__layout .msh2 {
+    font-size: 1.77689rem;
+    line-height: 2.66533rem; }
+  .block-editor-block-list__layout h4, .block-editor-block-list__layout .h4, .block-editor-block-list__layout .msh1 {
+    font-size: 1.333rem;
+    line-height: 1.9995rem; }
+  .block-editor-block-list__layout h5, .block-editor-block-list__layout .h5, .block-editor-block-list__layout .msh0 {
+    font-size: 1rem;
+    line-height: 1.5rem; }
+  .block-editor-block-list__layout .mst-1, .block-editor-block-list__layout .small {
+    font-size: 0.72rem;
+    line-height: 0.96rem; }
+  .block-editor-block-list__layout .mst0 {
     font-size: 0.9rem;
-    line-height: 1.3rem; }
+    line-height: 1.2rem; }
+  .block-editor-block-list__layout .mst1 {
+    font-size: 1.125rem;
+    line-height: 1.5rem; }
 
 .wp-block {
   max-width: 800px; }

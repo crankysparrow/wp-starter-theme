@@ -41,7 +41,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	## Captions
 	## Galleries
 --------------------------------------------------------------*/
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700|Titillium+Web:300,400,400i,600,600i,700,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Domine:wght@400;700&family=Montserrat&display=swap");
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -354,24 +354,15 @@ select,
 optgroup,
 textarea {
   color: #7a8295;
-  font-family: "Open Sans", sans-serif;
-  line-height: 1.3rem;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.2rem;
   font-size: 0.9rem; }
-  @media (min-width: 992px) {
-    body,
-    button,
-    input,
-    select,
-    optgroup,
-    textarea {
-      font-size: 1.1rem;
-      line-height: 1.75rem; } }
 
 body {
   font-weight: 400; }
 
 p {
-  margin-bottom: 1.5em; }
+  margin: 1rem 0; }
 
 dfn, cite, em, i {
   font-style: italic; }
@@ -402,47 +393,48 @@ mark, ins {
   background: #fff9c0;
   text-decoration: none; }
 
-big {
-  font-size: 125%; }
-
-h1, h2, h3 {
+h1, h2, h3, h4, h5 {
   color: black;
-  font-family: "Titillium Web", serif;
-  font-weight: 700;
-  clear: both; }
+  font-family: "Domine", serif;
+  font-weight: 400;
+  clear: both;
+  margin: .2rem 0; }
 
 h1, h2, h3, h4, h5 {
   color: black; }
 
-h1 {
-  font-size: 2.1rem;
-  line-height: 2.4rem;
+h1, .h1, .msh4 {
+  font-size: 3.15733rem;
+  line-height: 4.736rem;
   margin: .5rem 0; }
-  @media (min-width: 992px) {
-    h1 {
-      font-size: 2.4rem;
-      line-height: 3.2rem; } }
 
-h2 {
-  font-size: 1.9rem;
-  line-height: 2.3rem; }
+h2, .h2, .msh3 {
+  font-size: 2.36859rem;
+  line-height: 3.55289rem; }
 
-h3 {
-  font-size: 1.7rem; }
+h3, .h3, .msh2 {
+  font-size: 1.77689rem;
+  line-height: 2.66533rem; }
 
-h4 {
-  font-size: 1.5rem; }
+h4, .h4, .msh1 {
+  font-size: 1.333rem;
+  line-height: 1.9995rem; }
 
-h5 {
-  font-size: 1.3rem; }
+h5, .h5, .msh0 {
+  font-size: 1rem;
+  line-height: 1.5rem; }
 
-.smalltitle {
-  text-transform: uppercase;
-  color: black;
-  letter-spacing: .1rem;
-  font-weight: 550;
+.mst-1, .small {
+  font-size: 0.72rem;
+  line-height: 0.96rem; }
+
+.mst0 {
   font-size: 0.9rem;
-  line-height: 1.3rem; }
+  line-height: 1.2rem; }
+
+.mst1 {
+  font-size: 1.125rem;
+  line-height: 1.5rem; }
 
 /*--------------------------------------------------------------
 # Elements
@@ -528,7 +520,7 @@ figure {
 input[type="button"],
 input[type="reset"],
 input[type="submit"], .button-outline {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   text-decoration: none;
   border: 1px solid;
   border-color: #128040;
@@ -911,18 +903,118 @@ a {
   margin-left: auto;
   margin-right: auto; }
 
-/*--------------------------------------------------------------
-# Clearings
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Widgets
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Content
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Infinite scroll
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Media
---------------------------------------------------------------*/
+.blog-cards-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1000px; }
+  @media (min-width: 768px) {
+    .blog-cards-container {
+      width: 90vw; } }
+  @media (min-width: 576px) {
+    .blog-cards-container:after {
+      content: '';
+      display: flex;
+      width: 43vw;
+      flex: 0 0 43vw; } }
+  @media (min-width: 768px) {
+    .blog-cards-container:after {
+      width: 40vw;
+      flex: 0 0 40vw; } }
+  @media (min-width: 992px) {
+    .blog-cards-container:after {
+      width: 27vw;
+      flex: 0 0 27vw;
+      max-width: 275px; } }
+
+.blog-card {
+  width: 66vw;
+  flex: 0 0 66vw; }
+  .blog-card .card-thumbnail {
+    width: 66vw;
+    height: calc(66vw * .6); }
+  @media (min-width: 375px) {
+    .blog-card {
+      width: 66vw;
+      flex: 0 0 66vw; }
+      .blog-card .card-thumbnail {
+        width: 66vw;
+        height: calc(66vw * .6); } }
+  @media (min-width: 576px) {
+    .blog-card {
+      width: 43vw;
+      flex: 0 0 43vw; }
+      .blog-card .card-thumbnail {
+        width: 43vw;
+        height: calc(43vw * .6); } }
+  @media (min-width: 768px) {
+    .blog-card {
+      width: 40vw;
+      flex: 0 0 40vw; }
+      .blog-card .card-thumbnail {
+        width: 40vw;
+        height: calc(40vw * .6); } }
+  @media (min-width: 992px) {
+    .blog-card {
+      width: 27vw;
+      flex: 0 0 27vw; }
+      .blog-card .card-thumbnail {
+        width: 27vw;
+        height: calc(27vw * .6); } }
+  @media (min-width: 1200px) {
+    .blog-card {
+      width: 27vw;
+      flex: 0 0 27vw; }
+      .blog-card .card-thumbnail {
+        width: 27vw;
+        height: calc(27vw * .6); } }
+
+.card-thumbnail {
+  overflow: hidden; }
+  .card-thumbnail .card-thumbnail-image {
+    object-fit: cover;
+    height: 100%;
+    width: 100%; }
+
+.acfe-flexible-placeholder a.blog-card {
+  text-decoration: none; }
+
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 8px 10px 1px rgba(0, 0, 0, 0.14);
+  padding-bottom: 1.2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  top: 0;
+  transition: top 200ms ease-out; }
+  .blog-card:hover {
+    top: .5rem;
+    text-decoration: none; }
+    .blog-card:hover .read-more {
+      text-decoration: underline; }
+  .blog-card .card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem; }
+  .blog-card .title {
+    border-bottom: 2px solid #7a8295; }
+  .blog-card .card-text {
+    margin-top: .2rem;
+    text-decoration: none; }
+    .blog-card .card-text p {
+      margin: .6rem 0; }
+  .blog-card .read-more {
+    flex-grow: 1;
+    display: flex;
+    align-items: flex-end; }
+
+@media (min-width: 992px) {
+  .blog-card {
+    max-width: 275px; }
+    .blog-card .card-thumbnail {
+      max-width: 275px;
+      max-height: calc(275px * .6); } }

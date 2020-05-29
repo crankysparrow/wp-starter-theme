@@ -89,6 +89,15 @@ endif;
 add_action( 'after_setup_theme', 'sparrow_starter_setup' );
 
 /**
+ * Filter the excerpt length to be 20 words instead of 55
+*/
+
+function sparrow_custom_excerpt_length($length) {
+	return 20;
+}
+add_filter('excerpt_length', 'sparrow_custom_excerpt_length');
+
+/**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
  * Priority 0 to make it available to lower priority callbacks.

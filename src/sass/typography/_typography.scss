@@ -6,12 +6,8 @@ optgroup,
 textarea {
 	color: $color__text-main;
 	font-family: $font__main;
-	line-height: $font__main-line-height;
-	font-size: $font__main-size;
-	@include breakpoint-up(lg) {
-		font-size: $font__main-size-lg;
-		line-height: $font__main-line-height-lg;
-	}
+	line-height: $line-mst-0;
+	font-size: $font-mst-0;
 }
 
 @import "copy";
