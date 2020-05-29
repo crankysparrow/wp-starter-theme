@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package revenue_growth
+ * @package sparrow_starter
  */
 
 ?>
@@ -33,6 +33,6 @@
 	</div><!-- .entry-summary -->
 
 	<footer class="entry-footer">
-		<?php /* mstarter_entry_footer(); */ ?>
+		<?php /* sparrow_starter_entry_footer(); */ ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

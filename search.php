@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
  *
- * @package revenue_growth
+ * @package sparrow_starter
  */
 
 get_header();

@@ -1,20 +1,20 @@
 <?php
 /**
- * mstarter functions and definitions
+ * sparrow_starter functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package mstarter
+ * @package sparrow_starter
  */
 
- function mstarter_init() {
+ function sparrow_starter_init() {
 	 remove_post_type_support( 'post', 'comments' );
 	 remove_post_type_support( 'page', 'comments' );
  }
- add_action( 'init', 'mstarter_init' );
+ add_action( 'init', 'sparrow_starter_init' );
 
 
-if ( ! function_exists( 'mstarter_setup' ) ) :
+if ( ! function_exists( 'sparrow_starter_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -22,14 +22,14 @@ if ( ! function_exists( 'mstarter_setup' ) ) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function mstarter_setup() {
+	function sparrow_starter_setup() {
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on mstarter, use a find and replace
-		 * to change 'mstarter' to the name of your theme in all the template files.
+		 * If you're building a theme based on sparrow_starter, use a find and replace
+		 * to change 'sparrow_starter' to the name of your theme in all the template files.
 		 */
-		load_theme_textdomain( 'mstarter', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'sparrow_starter', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -51,7 +51,7 @@ if ( ! function_exists( 'mstarter_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Nav Bar Top', 'mstarter' ),
+			'menu-1' => esc_html__( 'Nav Bar Top', 'sparrow_starter' ),
 		) );
 
 		/*
@@ -65,7 +65,7 @@ if ( ! function_exists( 'mstarter_setup' ) ) :
 		) );
 
 		// Set up the WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( 'mstarter_custom_background_args', array(
+		add_theme_support( 'custom-background', apply_filters( 'sparrow_starter_custom_background_args', array(
 			'default-color' => 'ffffff',
 			'default-image' => '',
 		) ) );
@@ -86,7 +86,7 @@ if ( ! function_exists( 'mstarter_setup' ) ) :
 		) );
 	}
 endif;
-add_action( 'after_setup_theme', 'mstarter_setup' );
+add_action( 'after_setup_theme', 'sparrow_starter_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -95,51 +95,51 @@ add_action( 'after_setup_theme', 'mstarter_setup' );
  *
  * @global int $content_width
  */
-function mstarter_content_width() {
+function sparrow_starter_content_width() {
 	// This variable is intended to be overruled from themes.
 	// Open WPCS issue: {@link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/1043}.
 	// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
-	$GLOBALS['content_width'] = apply_filters( 'mstarter_content_width', 900 );
+	$GLOBALS['content_width'] = apply_filters( 'sparrow_starter_content_width', 900 );
 }
-add_action( 'after_setup_theme', 'mstarter_content_width', 0 );
+add_action( 'after_setup_theme', 'sparrow_starter_content_width', 0 );
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-// function mstarter_widgets_init() {
+// function sparrow_starter_widgets_init() {
 // 	register_sidebar( array(
-// 		'name'          => esc_html__( 'Sidebar', 'mstarter' ),
+// 		'name'          => esc_html__( 'Sidebar', 'sparrow_starter' ),
 // 		'id'            => 'sidebar-1',
-// 		'description'   => esc_html__( 'Add widgets here.', 'mstarter' ),
+// 		'description'   => esc_html__( 'Add widgets here.', 'sparrow_starter' ),
 // 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 // 		'after_widget'  => '</section>',
 // 		'before_title'  => '<h2 class="widget-title">',
 // 		'after_title'   => '</h2>',
 // 	) );
 // }
-// add_action( 'widgets_init', 'mstarter_widgets_init' );
+// add_action( 'widgets_init', 'sparrow_starter_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
-function mstarter_scripts() {
-	wp_enqueue_style( 'mstarter-default-stylesheet', get_stylesheet_uri() );
+function sparrow_starter_scripts() {
+	wp_enqueue_style( 'sparrow_starter-default-stylesheet', get_stylesheet_uri() );
 
-	wp_enqueue_style( 'mstarter-styles', get_template_directory_uri() . '/dist/css/style.css');
+	wp_enqueue_style( 'sparrow_starter-styles', get_template_directory_uri() . '/dist/css/style.css');
 
-	wp_enqueue_script( 'mstarter-scripts', get_template_directory_uri() . '/dist/js/bundle.js', array('jquery'), null, true );
+	wp_enqueue_script( 'sparrow_starter-scripts', get_template_directory_uri() . '/dist/js/bundle.js', array('jquery'), null, true );
 }
-add_action( 'wp_enqueue_scripts', 'mstarter_scripts' );
+add_action( 'wp_enqueue_scripts', 'sparrow_starter_scripts' );
 
 /**
  * Gutenberg Allowed Blocks
  */
 
-add_filter('allowed_block_types', 'mstarter_allowed_blocks');
+add_filter('allowed_block_types', 'sparrow_starter_allowed_blocks');
 
-function mstarter_allowed_blocks( $allowed_blocks ) {
+function sparrow_starter_allowed_blocks( $allowed_blocks ) {
 	return array(
 		'core/image',
 		'core/paragraph',
@@ -152,10 +152,10 @@ function mstarter_allowed_blocks( $allowed_blocks ) {
 /**
  * Load editor styles for Gutenberg
  */
-function mstarter_block_editor_styles() {
-	wp_enqueue_style('mstarter-block-editor-styles', get_template_directory_uri() . '/dist/css/style-editor.css' );
+function sparrow_starter_block_editor_styles() {
+	wp_enqueue_style('sparrow_starter-block-editor-styles', get_template_directory_uri() . '/dist/css/style-editor.css' );
 }
-add_action( 'enqueue_block_editor_assets', 'mstarter_block_editor_styles' );
+add_action( 'enqueue_block_editor_assets', 'sparrow_starter_block_editor_styles' );
 
 /**
  * Load Jetpack compatibility file.

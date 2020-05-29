@@ -4869,7 +4869,7 @@ hr {
     width: auto; }
 
 ul, ol {
-  margin: 0 0 1.5em 3em; }
+  margin: 0 0 1.5rem 3rem; }
 
 ul {
   list-style: disc; }
@@ -4880,13 +4880,13 @@ ol {
 li > ul,
 li > ol {
   margin-bottom: 0;
-  margin-left: 1.5em; }
+  margin-left: 1.5rem; }
 
 dt {
   font-weight: bold; }
 
 dd {
-  margin: 0 1.5em 1.5em; }
+  margin: 0 1.5rem 1.5rem; }
 
 img {
   height: auto;
@@ -4897,10 +4897,6 @@ img {
 figure {
   margin: 1rem 0;
   /* Extra wide images within figure tags don't overflow the content area. */ }
-
-table {
-  margin: 0 0 1.5em;
-  width: 100%; }
 
 /*--------------------------------------------------------------
 # Forms
