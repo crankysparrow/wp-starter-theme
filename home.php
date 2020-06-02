@@ -8,20 +8,6 @@ get_header();
 
 	<main id="primary" class="content-area home-template">
 
-    <div style="margin-top: 100px;">
-      <h5>This is level 0</h5>    
-      <h4>This is level 1</h4>
-      <h3>This is level 2</h3>
-      <h2>This is level 3</h2>
-      <h1>This is level 4</h1>
-    </div>
-
-    <div>
-      <p class="mst1">This is level 1</p>
-      <p class="mst0">This is level 0</p>
-      <p class="mst-1">This is level -1</p>
-    </div>
-
     <?php if ( have_posts() ) : ?>
 
       <div class="blog-cards-container">

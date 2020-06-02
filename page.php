@@ -19,12 +19,19 @@ get_header();
 
 		<?php
 		while ( have_posts() ) :
-			the_post();
+			the_post(); ?>
 
-			get_template_part( 'template-parts/content', 'page' );
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+					<?php the_content(); ?>
+
+				</article><!-- #post-<?php the_ID(); ?> -->
 
 
-		endwhile; // End of the loop.
+			<!-- get_template_part( 'template-parts/content', 'page' ); -->
+
+
+		<?php endwhile; // End of the loop.
 		?>
 
 	</main><!-- #primary -->

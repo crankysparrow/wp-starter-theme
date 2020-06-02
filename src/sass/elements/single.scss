@@ -1,0 +1,31 @@
+#primary.template-single {
+  .post-content {
+    h1 {
+      font-size: $font-msh-3;
+      line-height: calc(#{$font-msh-3} + .3rem);
+    }
+    width: 95%;
+    margin: 0 auto;
+    // display: flex;
+    // flex-direction: column;
+  }
+  @include breakpoint-up(xs) {
+    .post-content {
+      width: 92%;
+    }
+  }
+  @include breakpoint-up(lg) {
+    .post-thumbnail {
+      width: 85%;
+      margin: 2rem auto;
+    }
+  }
+  @include breakpoint-up(xl) {
+    .post-thumbnail {
+      width: 80%;
+    }
+    .post-content {
+      width: 80%;
+    }
+  }
+}

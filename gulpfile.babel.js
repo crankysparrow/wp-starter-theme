@@ -1,15 +1,32 @@
 import gulp from 'gulp';
 import sass from 'gulp-sass';
+import sourcemaps from 'gulp-sourcemaps';
+import postcss from 'gulp-postcss';
+import autoprefixer from 'autoprefixer';
+import cleanCss from 'gulp-clean-css';
 import del from 'del';
 import browserSync from 'browser-sync';
 import webpack from 'webpack-stream';
 import named from 'vinyl-named';
+import yargs from 'yargs';
+import gulpif from 'gulp-if';
+import uglify from 'uglifyjs-webpack-plugin';
+import imagemin from 'imagemin';
+
+const PRODUCTION = yargs.argv.prod;
 
 export const clean = () => del(['dist']);
 
 export function styles() {
   return gulp.src(['./src/sass/style.scss', './src/sass/style-editor.scss'])
+    .pipe( gulpif(!PRODUCTION, sourcemaps.init()) )
     .pipe(sass().on('error', sass.logError))
+    .pipe( gulpif(PRODUCTION, postcss([ autoprefixer ])) )
+    .pipe(gulpif(PRODUCTION, cleanCss({debug: true}, (details) => {
+      console.log(`${details.name}: ${details.stats.originalSize}`);
+      console.log(`${details.name}: ${details.stats.minifiedSize}`);
+    })))
+    .pipe(gulpif(!PRODUCTION, sourcemaps.write()))
     .pipe(gulp.dest('./dist/css'))
     .pipe(server.stream());
 }
@@ -31,7 +48,12 @@ export function scripts() {
           }
         ]
       },
-      mode: 'development',
+      optimization: { 
+        minimizer: [
+          new uglify()
+        ]
+      },
+      mode: PRODUCTION ? 'production' : 'development',
       output: {
         filename: '[name].js'
       },
@@ -49,6 +71,12 @@ export const serve = done => {
     proxy: 'http://wpstarter.loc'
   });
   done();
+}
+
+export function images() {
+  return gulp.src('src/images/*')
+    .pipe(imagemin())
+    .pipe(gulp.dest('./images'))
 }
 
 export const reload = done => {

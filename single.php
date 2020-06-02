@@ -10,19 +10,39 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+	<div id="primary" class="template-single">
+		<main id="main">
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
+			<?php while ( have_posts() ) : the_post(); ?>
 
-			get_template_part( 'template-parts/content', get_post_type() );
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-			// the_post_navigation();
+					<?php if (has_post_thumbnail()) : ?>
+						<div class="post-thumbnail">
+							<?php the_post_thumbnail('full'); ?>
+						</div>
+					<?php endif; ?>	
 
-		endwhile; // End of the loop.
-		?>
+					<div class="post-content">
+						<h1><?php the_title(); ?></h1>
+
+						<div class="date h5">
+							<?php the_date(); ?>
+						</div>
+
+						<div class="categories">
+							<?php $cats = get_the_category();
+								foreach ($cats as $cat) : ?>
+									<span class="category"><?php echo $cat->cat_name ?></span>
+								<?php endforeach; ?>
+						</div>
+
+						<?php the_content(); ?>
+					</div>
+
+				</article>		
+
+			<?php endwhile; ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

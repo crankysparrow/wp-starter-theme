@@ -43,7 +43,8 @@ mark, ins {
 	text-decoration: none;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, 
+.h1, .h2, .h3, .h4, .h5 {
 	color: $color__text-header;
 	font-family: $font__headers;
 	font-weight: 400;

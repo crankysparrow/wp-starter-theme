@@ -19,8 +19,11 @@ body {
 
 hr {
 	background-color: $color__background-hr;
-	height: 2px;
-	margin-bottom: 1.5em;
+	border: 0;
+	border-top: 1px solid #ccc;
+	margin: 1rem 0;
+	// height: 2px;
+	// margin-bottom: 1.5em;
 }
 
 #primary {
@@ -28,29 +31,6 @@ hr {
 	flex-direction: column;
 	align-items: center;
 }
-
-.entry-content {
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-	align-items: center;
-	& > p, & > h1, & > h2, & > h3, & > h4, & > table {
-		width: 80%;
-		margin-left: auto;
-		margin-right: auto;
-	}
-}
-
-.entry-header, .entry-summary, .entry-thumbnail, .page-header {
-	width: 80%;
-	margin: 0 auto;
-	img {
-		max-height: 400px;
-		width: auto;
-	}
-}
-
-
 
 @import "lists";
 

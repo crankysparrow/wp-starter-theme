@@ -13,7 +13,7 @@
 
 	<footer class="site-footer">
 
-	</footer><!-- #colophon -->
+	</footer>
 
 
 </div> <!-- #page (in header) -->
