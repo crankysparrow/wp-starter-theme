@@ -68,7 +68,7 @@ var server = browserSync.create();
 
 export const serve = done => {
   server.init({
-    proxy: 'http://wpstarter.loc'
+    proxy: 'http://localhost:10023'
   });
   done();
 }

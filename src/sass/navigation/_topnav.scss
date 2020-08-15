@@ -1,0 +1,188 @@
+@import 'hamburger-toggle';
+
+.top-nav .menu-toggle:focus, .top-nav ul:focus {
+  outline: none;
+}
+
+#primary {
+  padding-top: 4rem;
+}
+
+@import 'hamburger-toggle';
+
+.top-nav {
+  height: 3.6rem;
+  position: fixed;
+  left: 0;
+  width: 100%;
+  padding: 0;
+  background-color: $color__menu-background;
+  .brand-and-button {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 2rem;
+    .toggler {
+      background-color: $color__menu-background;
+      z-index: 20;
+      .menu-toggle {
+        cursor: pointer;
+        border: 0;
+        height: 100%;
+        padding-left: 1.5rem;
+        background-color: transparent;
+      }
+      @include breakpoint-up(lg) {
+        display: none;
+      }
+    } 
+    .menu-brand {
+      height: 70px;
+      z-index: 20;
+      img {
+        height: 70px;
+        width: auto;
+      }
+    }         
+  }
+  #topnav-menu { 
+    background-color: $color__menu-background;
+    transform: translateY(-100vh);
+    transition: transform 400ms linear;   
+    padding-top: 5rem;    
+    width: 100%;
+    height: 100vh;
+    position: absolute; 
+    top: 0;
+    left: 0; 
+    margin: 0;
+    padding-left: 0;
+    li {
+      display: block;
+      padding: 1rem 2rem;
+      text-align: center;
+      font-weight: bold;
+      &.menu-item-has-children {
+        position: relative;
+        .sub-menu {
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 400ms ease-in-out;
+          margin: 0;
+          padding: 0;
+          list-style-type: none;
+          text-transform: none;
+          li {
+            padding: .3rem 0;
+            &:last-child {
+              padding-bottom: 0;
+              margin-bottom: 0;
+            }
+          }
+          &.sub-menu-open {
+            max-height: 500px;
+          }
+        }
+        .sub-menu-toggle {
+          width: 35px;
+          height: 1rem;
+          display: inline-block;
+          position: absolute;
+          background: transparent;
+          border: 0;
+          cursor: pointer;
+          @include breakpoint-up(lg) {
+            display: none;
+          }
+          &:after {
+            content: '';
+            width: 7px;
+            height: 7px;
+            position: absolute;
+            right: 4px;
+            top: .3rem;
+            transform: rotate(-135deg);         
+            transition: transform 300ms;   
+            border-top: 1px solid $navy;
+            border-left: 1px solid $navy;  
+          }
+          &[aria-expanded='true'] {
+            &:after {
+              transform: rotate(-45deg);
+            }
+          }
+        }          
+      }
+    }
+  }  
+  &.top-nav-open {
+    #topnav-menu {
+      transform: translateY(0);
+    }
+  }
+}
+
+@include breakpoint-up(lg) {
+  .top-nav {
+    #topnav-menu {
+      width: 100%;
+      transform: none;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      padding: 0 2rem;
+      transition: none;
+      justify-content: space-between;      
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      background-color: transparent;
+      right: 0;
+      left: auto;
+      width: auto;
+        li {
+          display: block;
+          padding: 0rem .6rem 0 .6rem;
+          margin: 0;
+          flex: 1 1 0;
+          white-space: nowrap;
+          // flex-grow: 1;
+          position: relative;
+          &.menu-item-has-children {
+            .sub-menu {
+              max-height: 0;
+              position: absolute;
+              width: calc(100% + 1.2rem);
+              left: 0;
+              display: flex;
+              flex-direction: column;
+              li {
+                padding: .5rem;
+                font-weight: 400;
+              }
+              li:last-child {
+                padding-bottom: .5rem;
+              }
+              &.sub-menu-open {
+                max-height: 500px;
+              }
+            }
+            .sub-menu-toggle {
+              &:after {
+                top: .5rem;
+              }
+            }            
+          }
+        }
+    }       
+  }
+}
+
+  //toggler
+
+.top-nav .menu-toggle:focus, .top-nav ul:focus {
+  outline: thin dotted;
+}

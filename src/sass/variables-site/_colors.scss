@@ -1,35 +1,34 @@
+$navy: #283844;
+$blue: #7094A0;
+$pear: #F3EFEB;
+$cognac: #C16653;
+$sand: #E3B27D;
+
+$color__text-main: $navy;
+$color__text-header: $cognac;
+
 $color__background-body: #fff;
 $color__background-screen: #f1f1f1;
 $color__background-hr: #ccc;
-$color__background-button: #128040;
 $color__background-pre: #eee;
 $color__background-ins: #fff9c0;
-
-// $color__background-emphasis: #128040;
 
 $color__text-screen: #21759b;
 $color__text-input: #7a8295;
 $color__text-input-focus: #111;
-$color__link: #128040;
-$color__link-visited: #128040;
-$color__link-hover: black;
+$color__link: $navy;
+$color__link-visited: $navy;
+$color__link-hover: $navy;
 
-$color__menu-link: black;
-$color__menu-link-visited:  black;
-$color__menu-link-hover: #128040;
-$color__menu-background: #128040;
+$color__menu-link: $navy;
+$color__menu-link-visited: $navy;
+$color__menu-link-hover: $navy;
+$color__menu-background: white;
 
-$color__text-main: #7a8295;
-$color__text-header: black;
-
-// $color__secondary: #92cc95;
-
-// $color__border-button: #ccc #ccc #bbb;
-// $color__border-button-hover: #ccc #bbb #aaa;
-// $color__border-button-focus: #aaa #bbb #bbb;
-$color__border-button: #128040;
-$color__border-button-hover: #128040;
-$color__border-button-focus: #128040;
+$color__background-button: $navy;
+$color__border-button: $navy;
+$color__border-button-hover: $navy;
+$color__border-button-focus: $navy;
 $color__button-text: white;
-$color__border-input: #cacaca;
+$color__border-input: $navy;
 $color__border-abbr: #666;

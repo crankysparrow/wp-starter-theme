@@ -25,22 +25,25 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'revgrowth' ); ?></a>
 
 	<nav id="menu-1" class="top-nav">
-		<div class="toggler">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-				<em class="hamburger"></em>
-			</button>
-		</div>
 
-		<div class="menu-brand">
-			<a href="<?php echo get_site_url(); ?>">
-				<?php $custom_logo_id = get_theme_mod('custom_logo');
-				$logo = wp_get_attachment_image_src( $custom_logo_id, 'full' );
-				if ( has_custom_logo() ) : ?>
-					<img src="<?php echo esc_url( $logo[0] ); ?>" alt="<?php echo get_bloginfo( 'name' ); ?>" class='brand-image' />
-				<?php else : 
-					get_bloginfo( 'name' );
-				endif; ?>
-			</a>
+		<div class="brand-and-button">
+			<div class="toggler">
+				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+					<em class="hamburger"></em>
+				</button>
+			</div>
+
+			<div class="menu-brand">
+				<a href="<?php echo get_site_url(); ?>">
+					<?php $custom_logo_id = get_theme_mod('custom_logo');
+					$logo = wp_get_attachment_image_src( $custom_logo_id, 'full' );
+					if ( has_custom_logo() ) : ?>
+						<img src="<?php echo esc_url( $logo[0] ); ?>" alt="<?php echo get_bloginfo( 'name' ); ?>" class='brand-image' />
+					<?php else : 
+						get_bloginfo( 'name' );
+					endif; ?>
+				</a>
+			</div>
 		</div>
 
 		<?php wp_nav_menu( array(
