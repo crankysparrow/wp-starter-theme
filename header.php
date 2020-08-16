@@ -34,15 +34,12 @@
 			</div>
 
 			<div class="menu-brand">
-				<a href="<?php echo get_site_url(); ?>">
-					<?php $custom_logo_id = get_theme_mod('custom_logo');
-					$logo = wp_get_attachment_image_src( $custom_logo_id, 'full' );
-					if ( has_custom_logo() ) : ?>
-						<img src="<?php echo esc_url( $logo[0] ); ?>" alt="<?php echo get_bloginfo( 'name' ); ?>" class='brand-image' />
-					<?php else : 
-						get_bloginfo( 'name' );
-					endif; ?>
-				</a>
+					<?php $header_logo = get_field( 'header_logo', 'options' ); ?>
+					<?php if ( $header_logo ) : ?>
+						<a href="<?php echo get_site_url(); ?>">
+							<img src="<?php echo esc_url( $header_logo['url'] ); ?>" alt="<?php echo esc_attr( $header_logo['alt'] ); ?>" />
+						</a>
+					<?php endif; ?>
 			</div>
 		</div>
 

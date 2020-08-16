@@ -19,7 +19,7 @@
     transition: transform 500ms;
   }
   
-  .site-nav-open .hamburger {
+  .top-nav-open .hamburger {
     background: transparent;
     &::before {
       transform: rotate(45deg);

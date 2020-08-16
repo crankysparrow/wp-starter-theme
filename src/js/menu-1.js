@@ -11,9 +11,9 @@
   class Navigation {
     constructor( topNav ) {
       this.topNav = topNav;
-      this.topNavMenu = $( '.topnav-menu-container' );
-      this.menuItemLinks = $( '.topnav-menu .menu-item a' );
-      this.menuItemTopLevel = $( '.topnav-menu > .menu-item > a' );
+      this.topNavMenu = $( '#topnav-menu' );
+      this.menuItemLinks = $( '#topnav-menu .menu-item a' );
+      this.menuItemTopLevel = $( '#topnav-menu > .menu-item > a' );
       this.toggleButton = $( '.menu-toggle' );
       this.subMenuToggle = $( '.sub-menu-toggle' );
       this.subMenuLinks = $( '.sub-menu-item' );
@@ -169,7 +169,6 @@
   }
 
   let navBar = new Navigation( $( '.top-nav' ) );
-  console.log(navBar);
 
   $( document ).mouseup( function ( e ) {
     var dropdown = $( '.menu-item-has-children' );
